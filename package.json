@@ -1,0 +1,16 @@
+{
+  "name": "exojbb",
+  "version": "1.0.0",
+  "description": "Source code for Examaminaon Course at EC-utbildning Helsingborg",
+  "scripts": {},
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cz-conventional-changelog": "3.3.0"
+  }
+}
