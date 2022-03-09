@@ -19,4 +19,8 @@
     list-style: none;
     padding: 0;
   }
+
+  li {
+    margin-bottom: 1rem;
+  }
 </style>

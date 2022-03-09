@@ -51,7 +51,7 @@
     display: none;
   }
 
-  p.error {
+  .error {
     display: block;
     color: red;
   }

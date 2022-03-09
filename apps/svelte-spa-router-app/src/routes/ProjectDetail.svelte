@@ -18,14 +18,13 @@
 
   let filterValue = 0;
   let filters = ["Alla", "Aktiva", "Klara"];
-  
 </script>
 
 <Header>
   <h2 slot="title">{currentProject.title}</h2>
-  <a slot="action" href={`/add-todo/${params.id}`} use:link>Lägg till uppgift</a>
+  <a slot="action" href={`/add-todo/${params.id}`} use:link>Lägg till uppgift</a
+  >
 </Header>
-
 <div class="btn-group">
   {#each filters as filter, index}
     <label class:active={filterValue === index}>
@@ -40,24 +39,24 @@
   {/each}
 </div>
 {#if $todos.filter((t) => t.projectId === params.id).length > 0}
-  {#if uncompletedTaks.length > 0}
-    <div
-      style:display={filterValue === 0 || filterValue === 1 ? "block" : "none"}
-    >
+  <div
+    style:display={filterValue === 0 || filterValue === 1 ? "block" : "none"}
+  >
+    {#if uncompletedTaks.length > 0}
       <TodoList title={"Aktiva uppgifter"} todos={uncompletedTaks} />
-    </div>
-  {:else}
-    <p>Inga aktiva uppgifter</p>
-  {/if}
-  {#if completedTaks.length > 0}
+    {:else}
+      <p>Inga aktiva uppgifter</p>
+    {/if}
+  </div>
   <div
     style:display={filterValue === 0 || filterValue === 2 ? "block" : "none"}
   >
-    <TodoList title={"Avslutade uppgifter"} todos={completedTaks} />
+    {#if completedTaks.length > 0}
+      <TodoList title={"Avslutade uppgifter"} todos={completedTaks} />
+    {:else}
+      <p>Inga klara uppgifter</p>
+    {/if}
   </div>
-  {:else}
-    <p>Inga klara uppgifter</p>
-  {/if}
 {:else}
   <p>Du har inga uppgifter i projektet</p>
 {/if}

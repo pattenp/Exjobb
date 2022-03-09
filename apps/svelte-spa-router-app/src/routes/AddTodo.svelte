@@ -24,11 +24,11 @@
 </script>
 
 <h2>Lägg till upggift</h2>
-<form>
+<form on:submit|preventDefault>
   <label>
     Titel
     <input type="text" bind:value={title} />
-    <span class:error></span>
+    <p class:error>Uppgift måste ha en titel</p>
   </label>
   <label>
     Beskrivning 
@@ -55,7 +55,7 @@
      grid-template-columns: 1fr 1fr;
      gap: 1rem;
   }
-  span {
+  p {
       display: none;
   }
   .error {

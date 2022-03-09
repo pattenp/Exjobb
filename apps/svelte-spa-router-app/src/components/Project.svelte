@@ -25,9 +25,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #64748B;
+    background-color: #64748b;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
+  }
+
+  h3 {
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 </style>
