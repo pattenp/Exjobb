@@ -3,7 +3,7 @@
 </script>
 
 <div>
-    <input on:change type="checkbox" bind:checked={completed}>
+    <input on:click|stopPropagation on:change type="checkbox" bind:checked={completed}>
 </div>
 
 <style>
