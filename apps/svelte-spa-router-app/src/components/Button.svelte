@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<button on:click|preventDefault>
+<button on:click|preventDefault|stopPropagation>
     <slot></slot>
 </button>
 
