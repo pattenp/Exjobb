@@ -5,17 +5,18 @@
 </script>
 
 <h3>{title}</h3>
-{#each todos as todo}
-  <ul>
+
+<ul>
+  {#each todos as todo}
     <li>
       <Todo id={todo.id} title={todo.title} completed={todo.completed} />
     </li>
-  </ul>
-{/each}
+  {/each}
+</ul>
 
 <style>
-    ul {
-        list-style: none;
-        padding: 0;
-    }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 </style>
